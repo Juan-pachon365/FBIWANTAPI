@@ -1,35 +1,40 @@
-<html lang="en">
+<!doctype html>
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FBIwanted</title>
-    <link rel="stylesheet" href="Style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FBI Wanted - Investigaciones</title>
+  <link rel="stylesheet" href="Style.css" />
 </head>
 <body>
-    <nav>
-        <button onclick="Home()">Home</button>
-        <button onclick="Buscando()">Bsucando</button>
-        <button onclick="Informativa()">Informativa</button>
-        <button onclick="Capturados()">Capturados</button>
-        <button onclick="Original()">Original</button>
-    </nav>
-
-    <div id="root">
-        <!-- aqui se agrega lo que hagamos en js -->
+  <header class="topbar">
+    <div class="brand">
+      <h1>FBI Wanted</h1>
+      <p class="subtitle">Casos públicos - Demo de integración</p>
     </div>
-    <script src="paginas/conexion.js"></script>
-    <script src="paginas/home.js"></script>
-    <script src="paginas/detalle.js"></script>
-    <script src="paginas/Buscando.js"></script>
-    <script src="paginas/informativa.js"></script>
-    <script src="paginas/capturados.js"></script>
-    <script src="paginas/Original.js"></script>
+    <nav>
+      <button onclick="Home()">Home</button>
+      <button onclick="Informativa()">Informativa</button>
+      <button onclick="Capturados()">Capturados</button>
+      <button onclick="Favoritos()">Favoritos</button>
+    </nav>
+  </header>
 
-    <script>
+  <main id="root"></main>
 
-        document.addEventListener("DOMContentLoaded",General)
+  <!-- Scripts: cargar en orden -->
+  <script src="js/conexion.js"></script>
+  <script src="js/home.js"></script>
+  <script src="js/detalle.js"></script>
+  <script src="js/capturados.js"></script>
+  <script src="js/favoritos.js"></script>
+  <script src="js/informativa.js"></script>
 
-    </script>
-    
+  <script>
+    // Inicializamos la app (conexion.js define General())
+    document.addEventListener('DOMContentLoaded', () => {
+      General();
+    });
+  </script>
 </body>
 </html>
