@@ -1,20 +1,35 @@
-<!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FBI WebView</title>
+    <title>FBIwanted</title>
     <link rel="stylesheet" href="Style.css">
-    <script defer src="Script.js"></script>
 </head>
 <body>
     <nav>
-        <button onclick="showTab('home')">Inicio</button>
-        <button onclick="showTab('favoritos')">Favoritos</button>
-        <button onclick="showTab('individual')">Individual</button>
-        <button onclick="showTab('original')">Original</button>
-        <button onclick="showTab('informativo')">Info</button>
+        <button onclick="Home()">Home</button>
+        <button onclick="Buscando()">Bsucando</button>
+        <button onclick="Informativa()">Informativa</button>
+        <button onclick="Capturados()">Capturados</button>
+        <button onclick="Original()">Original</button>
     </nav>
-    <main id="app"></main>
+
+    <div id="root">
+        <!-- aqui se agrega lo que hagamos en js -->
+    </div>
+    <script src="paginas/conexion.js"></script>
+    <script src="paginas/home.js"></script>
+    <script src="paginas/detalle.js"></script>
+    <script src="paginas/Buscando.js"></script>
+    <script src="paginas/informativa.js"></script>
+    <script src="paginas/capturados.js"></script>
+    <script src="paginas/Original.js"></script>
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded",General)
+
+    </script>
+    
 </body>
 </html>
